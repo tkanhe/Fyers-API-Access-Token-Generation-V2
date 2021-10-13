@@ -16,13 +16,13 @@ redirect_uri = "******"
 
 
 def read_file():
-    with open("tokenf.txt", "r") as f:
+    with open("token.txt", "r") as f:
         token = f.read()
     return token
 
 
 def write_file(token):
-    with open('tokenf.txt', 'w') as f:
+    with open('token.txt', 'w') as f:
         f.write(token)
 
 
