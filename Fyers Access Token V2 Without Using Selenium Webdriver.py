@@ -39,8 +39,7 @@ def setup():
         'content-type': 'application/json; charset=UTF-8',
         'origin': 'https://api.fyers.in',
         'referer': r1,
-        'accept-language': 'en-US,en;q=0.9'
-    }
+        'accept-language': 'en-US,en;q=0.9'}
 
     session = requests.Session()
     session.get(f'https://api.fyers.in/api/v2/generate-authcode?client_id={client_id}&redirect_uri={redirect_uri}&response_type=code')
@@ -69,10 +68,10 @@ def check():
     fyers = fyersModel.FyersModel(client_id=client_id, token=token, log_path=os.getcwd())
     response = fyers.get_profile()
     if 'error' in response['s'] or 'error' in response['message'] or 'expired' in response['message']:
-        print('Getting a access token !')
+        print('Getting a access token!')
         setup()
     else:
-        print('You already have a access token !')
+        print('You already have a access token!')
         print(response)
 
 
