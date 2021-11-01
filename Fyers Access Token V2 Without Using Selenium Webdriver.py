@@ -26,11 +26,8 @@ def write_file(token):
 
 
 def setup():
-    s1 = accessToken.SessionModel(client_id=client_id,
-                                  secret_key=secret_key,
-                                  redirect_uri=redirect_uri,
-                                  response_type='code',
-                                  grant_type='authorization_code')
+    s1 = accessToken.SessionModel(client_id=client_id, secret_key=secret_key, redirect_uri=redirect_uri,
+                                  response_type='code', grant_type='authorization_code')
     r1 = s1.generate_authcode()
 
     headers = {
@@ -48,7 +45,6 @@ def setup():
 
     parsed = urlparse(r2.json()['Url'])
     auth_code = parse_qs(parsed.query)['auth_code'][0]
-
     s1.set_token(auth_code)
     response = s1.generate_token()
     token = response["access_token"]
