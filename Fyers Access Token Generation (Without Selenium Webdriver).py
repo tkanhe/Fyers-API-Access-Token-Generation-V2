@@ -36,9 +36,9 @@ def setup():
         'accept-language': 'en-US,en;q=0.9'}
 
     data = f'{{"fyers_id":"{username}","password":"{password}","pan_dob":"{pan}","app_id":"{app_id}","redirect_uri":"{redirect_uri}","appType":"100","code_challenge":"","state":"abcdefg","scope":"","nonce":"","response_type":"code","create_cookie":true}}'
-    r2 = requests.post('https://api.fyers.in/api/v2/token', headers=headers, data=data)
+    resp = requests.post('https://api.fyers.in/api/v2/token', headers=headers, data=data)
 
-    parsed = urlparse(r2.json()['Url'])
+    parsed = urlparse(resp.json()['Url'])
     auth_code = parse_qs(parsed.query)['auth_code'][0]
     session.set_token(auth_code)
     response = session.generate_token()
