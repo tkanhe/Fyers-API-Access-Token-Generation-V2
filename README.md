@@ -8,7 +8,7 @@
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-### ***[Depricated] Method2 (With Selenium Webdriver):***
+### ***[Deprecated] Method2 (With Selenium Webdriver):***
 - Download the appropriate (as per your Google Chrome version) selenium chrome webdriver from https://chromedriver.chromium.org/downloads. 
 - Put the ***chromedriver.exe*** file in the same folder as the script.
 
