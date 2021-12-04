@@ -32,21 +32,21 @@ def setup():
 
     s = requests.Session()
 
-    data = f'{{"fy_id":"{username}","password":"{password}","app_id":"2","imei":"","recaptcha_token":""}}'
-    r1 = s.post('https://api.fyers.in/vagator/v1/login', data=data)
+    data1 = f'{{"fy_id":"{username}","password":"{password}","app_id":"2","imei":"","recaptcha_token":""}}'
+    r1 = s.post('https://api.fyers.in/vagator/v1/login', data=data1)
     request_key = r1.json()["request_key"]
 
-    data = f'{{"request_key":"{request_key}","identity_type":"pin","identifier":"{pin}","recaptcha_token":""}}'
-    r2 = s.post('https://api.fyers.in/vagator/v1/verify_pin', data=data)
+    data2 = f'{{"request_key":"{request_key}","identity_type":"pin","identifier":"{pin}","recaptcha_token":""}}'
+    r2 = s.post('https://api.fyers.in/vagator/v1/verify_pin', data=data2)
 
     headers = {
         'authorization': f"Bearer {r2.json()['data']['access_token']}",
         'content-type': 'application/json; charset=UTF-8'
     }
 
-    data = f'{{"fyers_id":"{username}","app_id":"{app_id}","redirect_uri":"{redirect_uri}","appType":"100","code_challenge":"","state":"abcdefg","scope":"","nonce":"","response_type":"code","create_cookie":true}}'
+    data3 = f'{{"fyers_id":"{username}","app_id":"{app_id}","redirect_uri":"{redirect_uri}","appType":"100","code_challenge":"","state":"abcdefg","scope":"","nonce":"","response_type":"code","create_cookie":true}}'
 
-    r3 = s.post('https://api.fyers.in/api/v2/token', headers=headers, data=data)
+    r3 = s.post('https://api.fyers.in/api/v2/token', headers=headers, data=data3)
 
     parsed = urlparse(r3.json()['Url'])
     auth_code = parse_qs(parsed.query)['auth_code'][0]
