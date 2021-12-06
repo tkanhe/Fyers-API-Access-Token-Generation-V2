@@ -5,14 +5,14 @@ from fyers_api import fyersModel
 from fyers_api import accessToken
 import requests
 
-username = "******"    # fyers_id
-password = "******"
-pin = 1551    # your integer pin
-client_id = "******"    # '##########-$$$'
-secret_key = "******"
-redirect_uri = "******"
+username = "******"         # fyers_id
+password = "******"         # fyers_password
+pin = 1551                  # your integer pin
+client_id = "******"        # "L9NY****W-100" (Client_id here refers to APP_ID of the created app)
+secret_key = "******"       # app_secret key which you got after creating the app
+redirect_uri = "******"     # redircet_uri you entered while creating APP.
 
-app_id = client_id[:-4]    # '##########'
+app_id = client_id[:-4]     # "L9NY****W" (don't change this app_id variable)
 
 
 def read_file():
