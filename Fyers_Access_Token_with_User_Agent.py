@@ -35,12 +35,13 @@ def setup():
         grant_type="authorization_code",
     )
 
-    s = requests.Session()
     headers = {
         "accept": "application/json",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
         "accept-language": "en-US,en;q=0.9",
     }
+
+    s = requests.Session()
     s.headers.update(headers)
 
     data1 = f'{{"fy_id":"{username}","password":"{password}","app_id":"2","imei":"","recaptcha_token":""}}'
