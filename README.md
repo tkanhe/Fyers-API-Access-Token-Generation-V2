@@ -1,3 +1,5 @@
+> As of April 23rd, 2023, when logging in to Fyers, you will need to enter the OTP sent to your email or mobile number. To accommodate this change, I have developed ```fyers_access_token_totp.py```. However, if you haven't manually logged in to the Fyers website, ```fyers_access_token_password.py``` will continue to function properly.
+
 First, you will have to register for External 2FA TOTP at https://myaccount.fyers.in/ManageAccount.
 While enabling External 2FA TOTP, you can scan the QR code using Google or Microsoft Authenticator and copy the TOTP KEY, as shown in the figure below. *If you don't want to use the Authenticator app, you can generate TOTP using the code in the repo https://github.com/tkanhe/totp-generator*
 
