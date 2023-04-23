@@ -14,9 +14,11 @@ Go to the above URL manually in the browser and give permissions to access the a
 
 ### Input parameters:
 - ```username(fyers_id)```, ```totp_key```, ```pin```, ```client_id```, ```secret_key```, ```redirect_uri```
-### Dependencies: 
-- Fyers API V2 ```pip install fyers-apiv2```
 
+### Requirements:
+- Python 3.6+
+- Requests  ```pip install requests```
+- Fyers API V2  ```pip install fyers-apiv2```
 
 *You can see Fyers official documentation at https://myapi.fyers.in/docs/*.  
 *You can create an APP using the Fyers API dashboard at https://myapi.fyers.in/dashboard/*.
