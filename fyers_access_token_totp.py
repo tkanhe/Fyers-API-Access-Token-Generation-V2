@@ -9,7 +9,7 @@ import requests
 from fyers_api import accessToken, fyersModel
 
 username = "******"  # fyers_id
-totp_key = "******"  # totp_key
+totp_key = "******"  # totp_key ("OMKR****CDVDFGECLWXKI6OVB7T4DTKU5")
 pin = 1551  # your integer pin
 client_id = "******"  # "L9NY****W-100" (Client_id here refers to APP_ID of the created app)
 secret_key = "******"  # app_secret key which you got after creating the app
