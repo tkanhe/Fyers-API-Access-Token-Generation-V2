@@ -57,7 +57,7 @@ def get_token():
 
     request_key = r2.json()["request_key"]
     data3 = f'{{"request_key":"{request_key}","identity_type":"pin","identifier":"{base64.b64encode(f"{pin}".encode()).decode()}"}}'
-    r3 = requests.post("https://api-t2.fyers.in/vagator/v2/verify_pin_v2", data=data3)
+    r3 = s.post("https://api-t2.fyers.in/vagator/v2/verify_pin_v2", data=data3)
     assert r3.status_code == 200, f"Error in r3:\n {r3.json()}"
 
     headers = {"authorization": f"Bearer {r3.json()['data']['access_token']}", "content-type": "application/json; charset=UTF-8"}
