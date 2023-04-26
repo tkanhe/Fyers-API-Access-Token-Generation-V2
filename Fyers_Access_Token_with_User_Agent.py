@@ -1,6 +1,5 @@
 """
-The file has been renamed in the repo:
-https://github.com/tkanhe/Fyers-API-Access-Token-Generation-V2. 
+This script has been deprecated. Please use the following scripts in the repo https://github.com/tkanhe/Fyers-API-Access-Token-Generation-V2
 
 To generate access token using TOTP:
 https://github.com/tkanhe/Fyers-API-Access-Token-Generation-V2/blob/main/fyers_access_token_totp.py
