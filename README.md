@@ -15,7 +15,7 @@ url = session.generate_authcode()
 Go to the above URL manually in the browser and give permissions to access the app. It is a one-time process. After that, you can use the script.
 
 ### Input parameters:
-- ```username(fyers_id)```, ```totp_key```, ```pin```, ```client_id```, ```secret_key```, ```redirect_uri```
+- ```username(fyers_id)```, ```totp_key/password```, ```pin```, ```client_id```, ```secret_key```, ```redirect_uri```
 
 ### Requirements:
 - Python 3.6+
