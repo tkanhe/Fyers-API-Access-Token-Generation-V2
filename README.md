@@ -1,3 +1,5 @@
+### *To generate access token for FYERS API V3, Please refer https://github.com/tkanhe/fyers-api-access-token-v3*
+
 > As of April 23rd, 2023, when logging in to Fyers, you will need to enter the OTP sent to your email or mobile number. To accommodate this change, I have developed ```fyers_access_token_totp.py```. However, if you haven't manually logged in to the Fyers website, ```fyers_access_token_password.py``` will continue to function properly.
 
 First, you will have to register for External 2FA TOTP at https://myaccount.fyers.in/ManageAccount.
